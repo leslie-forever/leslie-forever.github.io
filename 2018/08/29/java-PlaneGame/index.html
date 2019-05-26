@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>java_PlaneGame | Leslie-forever&#39;s blog</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="飞机大战" />
+    
+    <meta name="description" content="1.项目介绍&amp;emsp;&amp;emsp;项目主要实现的是：小飞机躲避炮弹，躲避失败后会显示爆炸图片，以及显示飞机的存活时间。 2.项目框架类MyGameFrame123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646">
+<meta name="keywords" content="飞机大战">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java_PlaneGame">
+<meta property="og:url" content="http://yoursite.com/2018/08/29/java-PlaneGame/index.html">
+<meta property="og:site_name" content="Leslie-forever&#39;s blog">
+<meta property="og:description" content="1.项目介绍&amp;emsp;&amp;emsp;项目主要实现的是：小飞机躲避炮弹，躲避失败后会显示爆炸图片，以及显示飞机的存活时间。 2.项目框架类MyGameFrame123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http://yoursite.com/2018/08/29/java-PlaneGame/PlaneGame.png">
+<meta property="og:updated_time" content="2018-08-29T10:09:49.258Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="java_PlaneGame">
+<meta name="twitter:description" content="1.项目介绍&amp;emsp;&amp;emsp;项目主要实现的是：小飞机躲避炮弹，躲避失败后会显示爆炸图片，以及显示飞机的存活时间。 2.项目框架类MyGameFrame123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646">
+<meta name="twitter:image" content="http://yoursite.com/2018/08/29/java-PlaneGame/PlaneGame.png">
+    
+
+    
+        <link rel="alternate" href="/" title="Leslie-forever&#39;s blog" type="application/atom+xml" />
+    
+
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/2.0.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+        <script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-66666666-6', 'auto');
+ga('send', 'pageview');
+
+</script>
+    
+    
+
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">Home</a>
+                                </li>
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">index.music</a>
+                                </li>
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">index.technology</a>
+                                </li>
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/about/index.html">About</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    uncategorized
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-java-PlaneGame" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        java_PlaneGame
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2018/08/29/java-PlaneGame/" class="article-date">
+            <time datetime="2018-08-29T09:16:46.000Z" itemprop="datePublished">2018-08-29</time>
+        </a>
+    </div>
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/飞机大战/">飞机大战</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <p><img src="/2018/08/29/java-PlaneGame/PlaneGame.png" alt=""><br><img src="/2018/08/29/java-PlaneGame/PlaneGame0.1.png" alt=""></p>
+<h2 id="1-项目介绍"><a href="#1-项目介绍" class="headerlink" title="1.项目介绍"></a>1.项目介绍</h2><p>&emsp;&emsp;项目主要实现的是：小飞机躲避炮弹，躲避失败后会显示爆炸图片，以及显示飞机的存活时间。</p>
+<h2 id="2-项目框架类MyGameFrame"><a href="#2-项目框架类MyGameFrame" class="headerlink" title="2.项目框架类MyGameFrame"></a>2.项目框架类MyGameFrame</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br></pre></td><td class="code"><pre><span class="line">public class MyGameFrame extends Frame&#123;</span><br><span class="line">	Image planeimg =GameUtil.getImage(<span class="string">"images/plane.png"</span>);//载入飞机图片</span><br><span class="line">	Image <span class="built_in">bg</span> =GameUtil.getImage(<span class="string">"images/bg.jpg"</span>); //载入背景图片</span><br><span class="line">	private Image offScreenImage = null;  //与双缓存相关，解决屏幕闪烁问题</span><br><span class="line">	Plane plane = new Plane(planeimg,300,350);   //创建飞机对象坐标(300,350)，即为飞机最初出现的位置</span><br><span class="line">	Shell[] shells = new Shell[28];   //创建炮弹对象</span><br><span class="line">	Explode bao;                     //爆炸对象</span><br><span class="line">	Date starTime = new Date();   //记录开始时间</span><br><span class="line">	Date endTime;                //定义结束时间</span><br><span class="line">	int period;                 //游戏持续时间</span><br><span class="line">	</span><br><span class="line">	//画笔</span><br><span class="line">	@Override</span><br><span class="line">	public void paint(Graphics g) &#123;</span><br><span class="line">		super.paint(g);</span><br><span class="line">		g.drawImage(<span class="built_in">bg</span>, 0, 0, null);  //画出背景图片(用非缩放的图像来呈现缩放的矩形，并且动态地执行所需的缩放)</span><br><span class="line">		plane.drawSelf(g);  //画飞机</span><br><span class="line">		Color c = g.getColor();  //保存原始颜色</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">for</span> (int i = 0; i &lt; shells.length; i++) &#123;</span><br><span class="line">			shells[i].draw(g);  //画出炮弹</span><br><span class="line">			//飞机和炮弹的碰撞检测</span><br><span class="line">			boolean pp = shells[i].getRect().intersects(plane.getRect());//先获取炮弹的矩形再判断是否与飞机的矩形相交</span><br><span class="line">			<span class="keyword">if</span>(pp) &#123;</span><br><span class="line">				plane.live = <span class="literal">false</span>;</span><br><span class="line">				<span class="keyword">if</span>(bao == null) &#123;</span><br><span class="line">					bao = new Explode(plane.x,plane.y);//传入飞机爆炸的坐标</span><br><span class="line">					endTime = new Date(); //结束时间</span><br><span class="line">					period = (int)((endTime.getTime()-starTime.getTime())/1000);//除以1000将单位从毫秒换算为秒</span><br><span class="line">					</span><br><span class="line">				&#125;</span><br><span class="line">				bao.draw(g); //依次画出16张爆炸图片</span><br><span class="line">			&#125;</span><br><span class="line">			</span><br><span class="line">			//计时功能并给出提示</span><br><span class="line">			<span class="keyword">if</span>(!plane.live) &#123;</span><br><span class="line">					g.setColor(Color.red);  //设置飞机爆炸后显示的字体颜色</span><br><span class="line">					Font f = new Font(<span class="string">"宋体"</span>, Font.BOLD, 20); //设置飞机爆炸后显示的字体样式</span><br><span class="line">					g.setFont(f);</span><br><span class="line">					g.drawString(<span class="string">"时间:"</span>+period+<span class="string">"秒"</span>, (int)plane.x, (int)plane.y);</span><br><span class="line">				&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		g.setColor(c); //改回修改之后的颜色</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	/**</span><br><span class="line">	 * 初始化窗口</span><br><span class="line">	 */</span><br><span class="line">	public void <span class="function"><span class="title">launchFrame</span></span>() &#123;</span><br><span class="line">			this.setTitle(<span class="string">"PlaneGame"</span>); //设置标题</span><br><span class="line">			this.setVisible(<span class="literal">true</span>); //设置窗口可见</span><br><span class="line">			this.setSize(Constant.Game_WIDTH,Constant.Game_HEIGHT); //设置窗口大小</span><br><span class="line">			this.setLocation(300,200);//设置窗口出现位置</span><br><span class="line">			this.addWindowListener(new <span class="function"><span class="title">WindowAdapter</span></span>() &#123;</span><br><span class="line">				@Override</span><br><span class="line">				public void windowClosing(WindowEvent e) &#123;</span><br><span class="line">					System.exit(0); //结束虚拟语句运行，0表示正常结束</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;);</span><br><span class="line">			</span><br><span class="line">			new PaintThread().start(); //启动重画窗口的线程</span><br><span class="line">			addKeyListener(new keyMonitor()); //给窗口增加键盘的监听</span><br><span class="line">			</span><br><span class="line">			//初始化炮弹</span><br><span class="line">			<span class="keyword">for</span> (int i = 0; i &lt; shells.length; i++) &#123;</span><br><span class="line">				shells[i] = new Shell();</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	</span><br><span class="line">	//定义一个内部类(可直接使用外部类的属性)</span><br><span class="line">	class PaintThread extends Thread&#123;</span><br><span class="line">		@Override</span><br><span class="line">		public void <span class="function"><span class="title">run</span></span>() &#123;</span><br><span class="line">			super.run();</span><br><span class="line">			<span class="keyword">while</span>(<span class="literal">true</span>) &#123;</span><br><span class="line">				repaint(); //重画</span><br><span class="line">				</span><br><span class="line">				try &#123;</span><br><span class="line">					Thread.sleep(15);//15毫秒</span><br><span class="line">				&#125; catch (InterruptedException e) &#123;</span><br><span class="line">					e.printStackTrace();</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			</span><br><span class="line">		&#125;//用于反复重画窗口</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	//定义键盘的内部类</span><br><span class="line">	class keyMonitor extends KeyAdapter&#123;</span><br><span class="line">		//键盘按下</span><br><span class="line">		@Override</span><br><span class="line">		public void keyPressed(KeyEvent e) &#123;</span><br><span class="line">			super.keyPressed(e);</span><br><span class="line">			plane.addDirection(e);</span><br><span class="line">		&#125;</span><br><span class="line">		//键盘松开</span><br><span class="line">		@Override</span><br><span class="line">		public void keyReleased(KeyEvent e) &#123;</span><br><span class="line">			super.keyReleased(e);</span><br><span class="line">			plane.minusDirection(e);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	//添加双缓冲技术</span><br><span class="line">	public void update(Graphics g) &#123;</span><br><span class="line">		<span class="keyword">if</span>(offScreenImage==null) &#123;</span><br><span class="line">			offScreenImage = this.createImage(Constant.Game_WIDTH, Constant.Game_HEIGHT); //窗口的高度与宽度</span><br><span class="line">		&#125;</span><br><span class="line">		Graphics gOff = offScreenImage.getGraphics();</span><br><span class="line">		paint(gOff);</span><br><span class="line">		g.drawImage(offScreenImage, 0, 0, null);</span><br><span class="line">	&#125;//解决屏幕闪烁问题</span><br><span class="line">	</span><br><span class="line">	//main函数</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		MyGameFrame m = new MyGameFrame();</span><br><span class="line">		m.launchFrame();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="3-工具类GameUtil-工具类最好将构造器私有化"><a href="#3-工具类GameUtil-工具类最好将构造器私有化" class="headerlink" title="3.工具类GameUtil(工具类最好将构造器私有化)"></a>3.工具类GameUtil(工具类最好将构造器私有化)</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">public class GameUtil &#123;</span><br><span class="line">    // 将构造器私有化。</span><br><span class="line">    private <span class="function"><span class="title">GameUtil</span></span>() &#123;</span><br><span class="line">    &#125; </span><br><span class="line">    </span><br><span class="line">    /**</span><br><span class="line">     * 返回指定路径文件的图片对象</span><br><span class="line">     * @param path</span><br><span class="line">     * @<span class="built_in">return</span></span><br><span class="line">     */</span><br><span class="line">    public static Image getImage(String path) &#123;</span><br><span class="line">        BufferedImage image = null;</span><br><span class="line">        URL u = GameUtil.class.getClassLoader().getResource(path);//帮助获得程序运行类加载器，加载资源的根目录，从而获得相对资源位置</span><br><span class="line">        try &#123;</span><br><span class="line">            System.out.println(u);</span><br><span class="line">            image = ImageIO.read(u);//读取图片信息，并返回Image对象 </span><br><span class="line">        &#125; catch (IOException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(image);</span><br><span class="line">        <span class="built_in">return</span> image;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="4-常量类-用于放置常量方便使用"><a href="#4-常量类-用于放置常量方便使用" class="headerlink" title="4.常量类(用于放置常量方便使用)"></a>4.常量类(用于放置常量方便使用)</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">/*</span><br><span class="line"> * 放置常量</span><br><span class="line"> */</span><br><span class="line">public class Constant &#123;</span><br><span class="line">	public static final int Game_WIDTH = 650; //窗口宽度</span><br><span class="line">	public static final int Game_HEIGHT = 500; //窗口高度</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="5-游戏物体的父类"><a href="#5-游戏物体的父类" class="headerlink" title="5.游戏物体的父类"></a>5.游戏物体的父类</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"> * 游戏物体的父类</span><br><span class="line"> * @author HZQ</span><br><span class="line"> *</span><br><span class="line"> */</span><br><span class="line">public class GameObject &#123;</span><br><span class="line">	Image img;  //物体对应的图片对象</span><br><span class="line">	double x,y; //物体对应的坐标  (在飞机类中为飞机的坐标，在炮弹类中为炮弹的坐标)</span><br><span class="line">	int speed;  //物体移动的速度</span><br><span class="line">	int width,height;  //物体所在矩形区域的高度与宽度</span><br><span class="line">	</span><br><span class="line">	public void drawSelf(Graphics g) &#123;</span><br><span class="line">		g.drawImage(img, (int)x, (int)y, null);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	//构造器初始化成员变量</span><br><span class="line">	public GameObject(Image img, double x, double y, int speed, int width, int height) &#123;</span><br><span class="line">		super();</span><br><span class="line">		this.img = img;</span><br><span class="line">		this.x = x;</span><br><span class="line">		this.y = y;</span><br><span class="line">		this.speed = speed;</span><br><span class="line">		this.width = width;</span><br><span class="line">		this.height = height;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	public GameObject(Image img, double x, double y) &#123;</span><br><span class="line">		super();</span><br><span class="line">		this.img = img;</span><br><span class="line">		this.x = x;</span><br><span class="line">		this.y = y;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	//无参构造器</span><br><span class="line">	public <span class="function"><span class="title">GameObject</span></span>()&#123;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	//用于矩形检测碰撞</span><br><span class="line">	public Rectangle <span class="function"><span class="title">getRect</span></span>() &#123;</span><br><span class="line">		<span class="built_in">return</span> new Rectangle((int)x, (int)y, width, height);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="6-飞机类"><a href="#6-飞机类" class="headerlink" title="6.飞机类"></a>6.飞机类</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br></pre></td><td class="code"><pre><span class="line">public class Plane extends GameObject&#123;</span><br><span class="line">	boolean left,up,right,down; //键盘控制的方向</span><br><span class="line">	boolean live = <span class="literal">true</span>; //用于判断飞机是否还live</span><br><span class="line">	</span><br><span class="line">	public void drawSelf(Graphics g) &#123;</span><br><span class="line">		<span class="keyword">if</span>(live) &#123;</span><br><span class="line">			g.drawImage(img, (int)x, (int)y, null);</span><br><span class="line">			</span><br><span class="line">		//使飞机移动起来且不会超出窗口范围</span><br><span class="line">		<span class="keyword">if</span>(left&amp;&amp;x&gt;=20) &#123;</span><br><span class="line">			x-=speed;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> &#123;</span><br><span class="line">			left = <span class="literal">false</span>;</span><br><span class="line">			<span class="keyword">if</span>(right&amp;&amp;x&lt;=Constant.Game_WIDTH-30) &#123;</span><br><span class="line">			x+=speed;</span><br><span class="line">		&#125;	</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">if</span>(right&amp;&amp;x&lt;=Constant.Game_WIDTH-30) &#123;</span><br><span class="line">			x+=speed;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> &#123;</span><br><span class="line">			right = <span class="literal">false</span>;</span><br><span class="line">			<span class="keyword">if</span>(left&amp;&amp;x&gt;=20) &#123;</span><br><span class="line">				x-=speed;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">if</span>(up&amp;&amp;y&gt;=50) &#123;</span><br><span class="line">			y-=speed;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> &#123;</span><br><span class="line">			up = <span class="literal">false</span>;</span><br><span class="line">			<span class="keyword">if</span>(down&amp;&amp;y&lt;=Constant.Game_HEIGHT-50) &#123;</span><br><span class="line">				y+=speed;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">if</span>(down&amp;&amp;y&lt;=Constant.Game_HEIGHT-50) &#123;</span><br><span class="line">			y+=speed;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> &#123;</span><br><span class="line">			down = <span class="literal">false</span>;</span><br><span class="line">			<span class="keyword">if</span>(up&amp;&amp;y&gt;=50) &#123;</span><br><span class="line">				y-=speed;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		&#125; </span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	//飞机类构造方法初始化</span><br><span class="line">	public Plane(Image img,double x,double y) &#123;</span><br><span class="line">		this.img = img;</span><br><span class="line">		this.x = x;</span><br><span class="line">		this.y = y;</span><br><span class="line">		this.speed =3;</span><br><span class="line">		this.width = img.getWidth(null); //获取图片的真实宽度</span><br><span class="line">		this.height = img.getHeight(null); //获取图片的真实高度</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	//按下某个键，增加相应的方向(实现键盘交互)</span><br><span class="line">	public void addDirection(KeyEvent e) &#123;</span><br><span class="line">			switch (e.getKeyCode()) &#123;</span><br><span class="line">		<span class="keyword">case</span> KeyEvent.VK_LEFT:</span><br><span class="line">			left = <span class="literal">true</span>;</span><br><span class="line">			<span class="built_in">break</span>;</span><br><span class="line">		<span class="keyword">case</span> KeyEvent.VK_UP:</span><br><span class="line">			up = <span class="literal">true</span>;</span><br><span class="line">			<span class="built_in">break</span>;</span><br><span class="line">		<span class="keyword">case</span> KeyEvent.VK_RIGHT:</span><br><span class="line">			right = <span class="literal">true</span>;</span><br><span class="line">			<span class="built_in">break</span>;</span><br><span class="line">		<span class="keyword">case</span> KeyEvent.VK_DOWN:</span><br><span class="line">			down = <span class="literal">true</span>;</span><br><span class="line">			<span class="built_in">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	//按下某个键，取消相应的方向</span><br><span class="line">	public void minusDirection(KeyEvent e) &#123;</span><br><span class="line">		switch (e.getKeyCode()) &#123;</span><br><span class="line">		<span class="keyword">case</span> KeyEvent.VK_LEFT:</span><br><span class="line">			left = <span class="literal">false</span>;</span><br><span class="line">			<span class="built_in">break</span>;</span><br><span class="line">		<span class="keyword">case</span> KeyEvent.VK_UP:</span><br><span class="line">			up = <span class="literal">false</span>;</span><br><span class="line">			<span class="built_in">break</span>;</span><br><span class="line">		<span class="keyword">case</span> KeyEvent.VK_RIGHT:</span><br><span class="line">			right = <span class="literal">false</span>;</span><br><span class="line">			<span class="built_in">break</span>;</span><br><span class="line">		<span class="keyword">case</span> KeyEvent.VK_DOWN:</span><br><span class="line">			down = <span class="literal">false</span>;</span><br><span class="line">			<span class="built_in">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="7-弹药类"><a href="#7-弹药类" class="headerlink" title="7.弹药类"></a>7.弹药类</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">public class Shell extends GameObject&#123;</span><br><span class="line">	double degree;  //弹药弹射方向与x轴的角度</span><br><span class="line">	</span><br><span class="line">	public <span class="function"><span class="title">Shell</span></span>() &#123;</span><br><span class="line">		//弹药最开始出现的位置</span><br><span class="line">		x = 200;</span><br><span class="line">		y = 200;</span><br><span class="line">		//弹药的长与宽</span><br><span class="line">		width=10;</span><br><span class="line">		height = 10;</span><br><span class="line">		speed = 1;</span><br><span class="line">		degree = Math.random()*Math.PI*2; //设置角度为2PI</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	public void draw(Graphics g) &#123;</span><br><span class="line">		Color c = g.getColor();</span><br><span class="line">		g.setColor(Color.YELLOW);  //设置弹药颜色</span><br><span class="line">		g.fillOval((int)x, (int)y, width, height); //颜色填充</span><br><span class="line">		</span><br><span class="line">		//实现让炮弹沿着任意角度飞</span><br><span class="line">		x += speed*Math.cos(degree); //求出移动后的x的坐标</span><br><span class="line">		y += speed*Math.sin(degree); //求出移动后y的坐标</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">if</span>(x&lt;0||x&gt;Constant.Game_WIDTH-width) &#123;</span><br><span class="line">			degree = Math.PI-degree;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">if</span>(y&lt;30||y&gt;Constant.Game_HEIGHT-height) &#123; //30为窗口标题宽度</span><br><span class="line">			degree = -degree;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		g.setColor(c);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="8-爆炸类"><a href="#8-爆炸类" class="headerlink" title="8.爆炸类"></a>8.爆炸类</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">/*</span><br><span class="line"> * 爆炸类</span><br><span class="line"> */</span><br><span class="line">public class Explode &#123;</span><br><span class="line">	double x, y;  //在MyGameFrame类中传入飞机爆炸的坐标</span><br><span class="line">	</span><br><span class="line">	static Image[] imgs = new Image[16]; </span><br><span class="line">	static &#123;</span><br><span class="line">		<span class="keyword">for</span> (int i=0;i&lt;16;i++) &#123;</span><br><span class="line">			imgs[i] = GameUtil.getImage(<span class="string">"images/explode/e"</span>+(i+1)+<span class="string">".gif"</span>);</span><br><span class="line">			imgs[i].getWidth(null);  //这句我也不懂为什么</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">			&#125;</span><br><span class="line">			int count; //图片计数，初值为0</span><br><span class="line">		</span><br><span class="line">		//连续载入16张爆炸图片</span><br><span class="line">		public void draw(Graphics g)&#123;</span><br><span class="line">			<span class="keyword">if</span>(count &lt;= 15) &#123;</span><br><span class="line">				g.drawImage(imgs[count], (int)x, (int)y, null);</span><br><span class="line">				count++;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">		//构造方法初始化</span><br><span class="line">		public Explode(double x, double y) &#123;</span><br><span class="line">			super();</span><br><span class="line">			this.x = x;</span><br><span class="line">			this.y = y;</span><br><span class="line">		&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="twitter" href="/" target="_blank">
+                        <i class="icon fa fa-twitter"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="facebook" href="http://facebook.com" target="_blank">
+                        <i class="icon fa fa-facebook"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="google-plus" href="/" target="_blank">
+                        <i class="icon fa fa-google-plus"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/ppoffice/hexo-theme-hueman" target="_blank">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="weibo" href="/" target="_blank">
+                        <i class="icon fa fa-weibo"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/" target="_blank">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2018/05/10/JS-Simplele-Animation-Effect/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">js实现动画效果</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">recents</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/08/29/java-PlaneGame/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/2018/08/29/java-PlaneGame/PlaneGame.png)" alt="java_PlaneGame" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2018/08/29/java-PlaneGame/" class="title">java_PlaneGame</a></p>
+                            <p class="item-date"><time datetime="2018-08-29T09:16:46.000Z" itemprop="datePublished">2018-08-29</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/05/10/JS-Simplele-Animation-Effect/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/2018/05/10/JS-Simplele-Animation-Effect/goodnight.jpg)" alt="js实现动画效果" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2018/05/10/JS-Simplele-Animation-Effect/" class="title">js实现动画效果</a></p>
+                            <p class="item-date"><time datetime="2018-05-10T15:32:09.000Z" itemprop="datePublished">2018-05-10</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/04/30/JS-DOM-Substaintiate-the-document/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2018/04/30/JS-DOM-Substaintiate-the-document/" class="title">JS_DOM_Substaintiate_The_Document</a></p>
+                            <p class="item-date"><time datetime="2018-04-30T08:01:55.000Z" itemprop="datePublished">2018-04-30</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/04/29/Summary/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2018/04/29/Summary/" class="title">Summary</a></p>
+                            <p class="item-date"><time datetime="2018-04-29T04:30:04.000Z" itemprop="datePublished">2018-04-29</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a><span class="archive-list-count">2</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">tags</h3>
+        <div class="widget">
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript-DOM-编程艺术之充实文档内容/">JavaScript_DOM 编程艺术之充实文档内容</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript—Dom—编程艺术第十章内容/">JavaScript—Dom—编程艺术第十章内容</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Summary1/">Summary1</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/飞机大战/">飞机大战</a><span class="tag-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/JavaScript-DOM-编程艺术之充实文档内容/" style="font-size: 10px;">JavaScript_DOM 编程艺术之充实文档内容</a> <a href="/tags/JavaScript—Dom—编程艺术第十章内容/" style="font-size: 10px;">JavaScript—Dom—编程艺术第十章内容</a> <a href="/tags/Summary1/" style="font-size: 10px;">Summary1</a> <a href="/tags/飞机大战/" style="font-size: 10px;">飞机大战</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">links</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://hexo.io">Hexo</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy; 2018 WestBrook</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+        
+    
+    <script>
+    var disqus_shortname = 'hexo-theme-hueman';
+    
+    
+    var disqus_url = 'http://yoursite.com/2018/08/29/java-PlaneGame/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>
