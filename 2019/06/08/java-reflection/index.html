@@ -19,7 +19,7 @@
 <meta property="og:url" content="http://yoursite.com/2019/06/08/java-reflection/index.html">
 <meta property="og:site_name" content="Leslie-forever&#39; blog">
 <meta property="og:description" content="#Java反射机制指的是在运行状态下，动态地对任意一个实体类，都能知道这个类的属性和方法；对任意对象都能调用它的任意方法和属性。(也可以看做一种看透class的能力) ##具体使用  获取类的对象三种方式：Class.forName(最常使用)new {类名}().getClass{类名}.classtip: 在获取类对象时，会导致类属性被初始化。（除了使用Class c = {类名}.class">
-<meta property="og:locale" content="zh-Hans">
+<meta property="og:locale" content="en">
 <meta property="og:updated_time" content="2019-06-08T14:19:55.574Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java_reflection">
@@ -70,15 +70,11 @@
                         <ul id="main-nav">
                             
                                 <li class="main-nav-list-item">
-                                    <a class="main-nav-list-link" href="/">主页</a>
+                                    <a class="main-nav-list-link" href="/">Home</a>
                                 </li>
                             
                                 <li class="main-nav-list-item">
-                                    <a class="main-nav-list-link" href="/">index.technology</a>
-                                </li>
-                            
-                                <li class="main-nav-list-item">
-                                    <a class="main-nav-list-link" href="/about/index.html">关于</a>
+                                    <a class="main-nav-list-link" href="/about/index.html">About</a>
                                 </li>
                             
                         </ul>
@@ -86,14 +82,14 @@
                             <div id="search-form-wrap">
 
     <form class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="搜索">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
         <button type="submit" class="search-form-submit"></button>
     </form>
     <div class="ins-search">
     <div class="ins-search-mask"></div>
     <div class="ins-search-container">
         <div class="ins-input-wrapper">
-            <input type="text" class="ins-search-input" placeholder="想要查找什么...">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
             <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
         </div>
         <div class="ins-section-wrapper">
@@ -105,11 +101,11 @@
 (function (window) {
     var INSIGHT_CONFIG = {
         TRANSLATION: {
-            POSTS: '文章',
-            PAGES: '页面',
-            CATEGORIES: '分类',
-            TAGS: '标签',
-            UNTITLED: '(未命名)',
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
         },
         ROOT_URL: '/',
         CONTENT_URL: '/content.json',
@@ -288,7 +284,7 @@
                     <aside id="sidebar">
     <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
     <div class="sidebar-top">
-        <p>关注我 :</p>
+        <p>follow:</p>
         <ul class="social-links">
             
                 
@@ -347,7 +343,7 @@
     
     
         <a href="/2019/05/26/test-blog/" id="article-nav-older" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">上一篇</strong>
+        <strong class="article-nav-caption">older</strong>
         <p class="article-nav-title">test_blog</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
@@ -363,7 +359,7 @@
             
                 
     <div class="widget-wrap">
-        <h3 class="widget-title">最新文章</h3>
+        <h3 class="widget-title">recents</h3>
         <div class="widget">
             <ul id="recent-post" class>
                 
@@ -434,7 +430,7 @@
             
                 
     <div class="widget-wrap widget-list">
-        <h3 class="widget-title">分类</h3>
+        <h3 class="widget-title">categories</h3>
         <div class="widget">
             <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/technology/">-technology</a><span class="category-list-count">1</span></li></ul>
         </div>
@@ -444,7 +440,7 @@
             
                 
     <div class="widget-wrap widget-list">
-        <h3 class="widget-title">归档</h3>
+        <h3 class="widget-title">archives</h3>
         <div class="widget">
             <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a><span class="archive-list-count">2</span></li></ul>
         </div>
@@ -454,7 +450,7 @@
             
                 
     <div class="widget-wrap widget-list">
-        <h3 class="widget-title">标签</h3>
+        <h3 class="widget-title">tags</h3>
         <div class="widget">
             <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/test/">__test__</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java相关/">java相关</a><span class="tag-list-count">1</span></li></ul>
         </div>
@@ -464,7 +460,7 @@
             
                 
     <div class="widget-wrap widget-float">
-        <h3 class="widget-title">标签云</h3>
+        <h3 class="widget-title">tag cloud</h3>
         <div class="widget tagcloud">
             <a href="/tags/test/" style="font-size: 10px;">__test__</a> <a href="/tags/java相关/" style="font-size: 10px;">java相关</a>
         </div>
@@ -474,7 +470,7 @@
             
                 
     <div class="widget-wrap widget-list">
-        <h3 class="widget-title">链接</h3>
+        <h3 class="widget-title">links</h3>
         <div class="widget">
             <ul>
                 
